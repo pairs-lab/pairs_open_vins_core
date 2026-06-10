@@ -1,0 +1,9 @@
+*~
+*.swp
+.gitman/
+build/
+devel/
+install/
+log/
+__pycache__/
+*.pyc

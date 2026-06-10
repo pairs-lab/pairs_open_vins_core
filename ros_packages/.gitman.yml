@@ -1,0 +1,57 @@
+location: .gitman
+sources:
+  - repo: https://github.com/ctu-mrs/open_vins
+    name: open_vins
+    rev: master
+    type: git
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: open_vins
+    scripts:
+      - git submodule update --init --recursive
+  - repo: https://github.com/pairs-lab/pairs_open_vins_estimator_plugin
+    name: pairs_open_vins_estimator_plugin
+    rev: ros1
+    type: git
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: pairs_open_vins_estimator_plugin
+    scripts:
+      - git submodule update --init --recursive
+  - repo: https://github.com/pairs-lab/pairs_vins_kickoff_estimator_plugin
+    name: pairs_vins_kickoff_estimator_plugin
+    rev: ros1
+    type: git
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: pairs_vins_kickoff_estimator_plugin
+    scripts:
+      - git submodule update --init --recursive
+  - repo: https://github.com/pairs-lab/pairs_vins_republisher
+    name: pairs_vins_republisher
+    rev: ros1
+    type: git
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: pairs_vins_republisher
+    scripts:
+      - git submodule update --init --recursive
+  - repo: https://github.com/pairs-lab/pairs_vins_imu_filter
+    name: pairs_vins_imu_filter
+    rev: ros1
+    type: git
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: pairs_vins_imu_filter
+    scripts:
+      - git submodule update --init --recursive
