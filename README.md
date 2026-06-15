@@ -1,13 +1,22 @@
 # pairs_open_vins_core
 
-**PAIRS OpenVINS core** metapackage. Runs the PAIRS UAV system with OpenVINS visual-inertial
-state estimation (launch / config / calibration for several camera-IMU rigs).
+Metapackage that pulls together everything needed to run the PAIRS UAV stack with OpenVINS
+visual-inertial odometry as its state-estimation source. It aggregates the upstream OpenVINS
+estimator with the PAIRS glue packages (estimator plugin, odometry republisher, IMU filter)
+so that camera + IMU data can drive the UAV's state estimator.
 
-The OpenVINS libraries (`ov_core`, `ov_eval`, `ov_init`, `ov_msckf`) are kept
-under their upstream names (third-party, from the `ctu-mrs/open_vins` fork) and
-provided as separate `.deb` packages — they are NOT renamed to `pairs_*`.
+The component repositories are declared in `ros_packages/.gitman.yml` and fetched with
+`gitman install`.
 
-Component repositories are managed via `ros_packages/.gitman.yml` (`gitman install`).
+## Contents (bundled via gitman)
+- `open_vins` — upstream OpenVINS visual-inertial estimator (`ov_core`, `ov_init`,
+  `ov_msckf`, `ov_eval`). Kept under its upstream name and provided as separate `.deb`
+  packages — NOT renamed to `pairs_*`.
+- `pairs_open_vins_estimator_plugin` — exposes OpenVINS as a state estimator inside the PAIRS
+  estimation manager.
+- `pairs_vins_republisher` — republishes OpenVINS odometry into the frames/topics the PAIRS
+  stack expects.
+- `pairs_vins_imu_filter` — IMU pre-filtering for the VIO pipeline.
 
 ## Branches
 - `ros1` — ROS 1 Noetic (catkin)
