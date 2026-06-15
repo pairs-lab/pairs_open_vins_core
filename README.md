@@ -1,12 +1,11 @@
 # pairs_open_vins_core
 
-**PAIRS OpenVINS core** metapackage — a faithful rename-port of the CTU-MRS
-`pairs_open_vins_core`. Runs the PAIRS UAV system with OpenVINS visual-inertial
+**PAIRS OpenVINS core** metapackage. Runs the PAIRS UAV system with OpenVINS visual-inertial
 state estimation (launch / config / calibration for several camera-IMU rigs).
 
 The OpenVINS libraries (`ov_core`, `ov_eval`, `ov_init`, `ov_msckf`) are kept
-under their upstream names (third-party, from the `ctu-mrs/open_vins` fork) and
-provided as separate `.deb` packages — they are NOT renamed to `pairs_*`.
+under their upstream names (third-party, from [OpenVINS](https://github.com/rpng/open_vins))
+and provided as separate `.deb` packages — they are NOT renamed to `pairs_*`.
 
 Component repositories are managed via `ros_packages/.gitman.yml` (`gitman install`).
 
@@ -16,4 +15,4 @@ Component repositories are managed via `ros_packages/.gitman.yml` (`gitman insta
 
 ## License
 BSD 3-Clause. Derived from the CTU-MRS `pairs_open_vins_core`; original copyright
-retained in [LICENSE](LICENSE). Maintainer: Thanh Nguyen Canh <canhthanh@vnu.edu.vn>
+retained in [LICENSE](LICENSE).
