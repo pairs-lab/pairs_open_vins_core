@@ -7,7 +7,7 @@
   <maintainer email="canhthanh@vnu.edu.vn">Thanh Nguyen Canh</maintainer>
   <author email="canhthanh@vnu.edu.vn">Thanh Nguyen Canh</author>
 
-  <license>TODO: License declaration</license>
+  <license>BSD-3-Clause</license>
 
   <depend>ov_core</depend>
   <depend>ov_eval</depend>
